@@ -55,7 +55,7 @@ cat <<EOF > terraform.tfvars
     client_id       = "$SERVICE_PRINCIPAL_ID"
     client_secret   = "Wye7Q~JKsFwuLOw11euTt4EHupLWcLIVNyjoU"
     tenant_id       = "$AZ_TENANT_ID"
-    pgsql_password   = "Vova&Gena42069"
+    pgsql_password   = "Tftask02!"
 EOF
 echo terraform.tfvars
 cat terraform.tfvars
