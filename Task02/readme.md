@@ -1,6 +1,5 @@
 1. az login
-2. prerequisites.sh
-3. env_vars.sh
-4. terraform init -backend-config=backend.tfvars
-5. terraform plan
-6. terraform apply
+2. env_vars.sh
+3. terraform init -backend-config=backend.tfvars
+4. terraform plan
+5. terraform apply
