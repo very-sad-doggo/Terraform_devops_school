@@ -18,3 +18,15 @@ cat <<EOF > terraform.tfvars
 EOF
 echo terraform.tfvars
 cat terraform.tfvars
+
+ACCOUNT_KEY="$(az storage account keys list -g vladimir-ryadovoy-diploma -n ryadovoystoracc --query [0].value -o tsv)"
+
+cat <<EOF > backend.tfvars
+    resource_group_name   = "vladimir-ryadovoy-diploma"
+    storage_account_name  = "ryadovoystoracc"
+    container_name        = "tfstate"
+    access_key            = "$ACCOUNT_KEY"
+    key                   = "terraform.tfstate"
+EOF
+echo backend.tfvars
+cat backend.tfvars
