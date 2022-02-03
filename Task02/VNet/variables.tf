@@ -1,5 +1,4 @@
 variable "address_space" {
-  type        = map(string)
   description = "CIDR for the whole VNet"
 }
 

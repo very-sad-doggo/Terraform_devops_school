@@ -18,7 +18,7 @@ module "subnet" {
   source           = "./subnet"
   res_group_name   = "${var.res_group}"
   vnet_name        = "${module.vnet.vnet_name}"
-  subnet_prefix  = "${var.subnet_prefixes}"
+  subnet_prefix  = "${var.subnet_prefix}"
 }
 resource "azurerm_network_interface" "nic" {
   name                = "tftask02-nic"
@@ -38,7 +38,7 @@ resource "azurerm_linux_virtual_machine" "nginx_vm" {
   size                = "Standard_F2"
   admin_username      = "adminuser"
   network_interface_ids = [
-    "${var.nic.id}",
+    azurerm_network_interface.nic.id,
   ]
 
   admin_ssh_key {
