@@ -12,7 +12,7 @@ resource "azurerm_postgresql_server" "az_psql" {
   backup_retention_days = "${var.pgsql_backup}"
   geo_redundant_backup_enabled = false
     
-  version                      = "9.6"
+  version                      = "11"
   ssl_enforcement_enabled              = true
  
 	 tags = {
