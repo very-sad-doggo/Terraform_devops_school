@@ -27,7 +27,7 @@ resource "azurerm_network_interface" "nic" {
 
   ip_configuration {
     name                          = "tftask02_ipconf"
-    subnet_id                     = "${module.subnet.id}"
+    subnet_id                     = "${module.subnet.subnet_id}"
     private_ip_address_allocation = "Dynamic"
   }
 }
