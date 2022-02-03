@@ -18,7 +18,7 @@ module "subnet" {
   source           = "./subnet"
   res_group_name   = "${var.res_group}"
   vnet_name        = "${module.vnet.vnet_name}"
-  subnet_prefixes  = "${var.subnet_prefixes}"
+  subnet_prefix  = "${var.subnet_prefixes}"
 }
 resource "azurerm_network_interface" "nic" {
   name                = "tftask02-nic"
